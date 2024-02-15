@@ -2,13 +2,26 @@ import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle,} 
 import {Label} from "@/components/ui/label.tsx";
 import {Button} from "@/components/ui/button.tsx";
 import {Input} from "@/components/ui/input.tsx";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
+interface Props {
+    onClickCreateNewAccount(): void
+}
 
-const SignIn = () => {
+const SignIn = ({onClickCreateNewAccount}: Props) => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const navigate = useNavigate()
+    const signInUser = (): void => {
+        console.log(email, password)
+        navigate('todolist')
+    }
+
     return (
         <Card className='w-[350px] mt-6' >
             <CardHeader className="space-y-1">
-                <CardTitle className="text-2xl">Create an account</CardTitle>
+                <CardTitle className="text-2xl">Sign In an account</CardTitle>
                 <CardDescription>
                     Enter your email below to create your account
                 </CardDescription>
@@ -36,15 +49,16 @@ const SignIn = () => {
                 </div>
                 <div className="grid gap-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="m@example.com"/>
+                    <Input id="email" type="email" placeholder="m@example.com" onChange={event => {setEmail(event.target.value)}}/>
                 </div>
                 <div className="grid gap-2">
                     <Label htmlFor="password">Password</Label>
-                    <Input id="password" type="password"/>
+                    <Input id="password" type="password" onChange={event => {setPassword(event.target.value)}}/>
                 </div>
             </CardContent>
-            <CardFooter>
-                <Button className="w-full">Create account</Button>
+            <CardFooter className='flex-col'>
+                <Button className="w-full" onClick={signInUser}>Log In</Button>
+                <Button variant="link" onClick={onClickCreateNewAccount}>Create New Account</Button>
             </CardFooter>
         </Card>
     );

@@ -6,9 +6,7 @@ import {CheckedState} from "@radix-ui/react-checkbox";
 
 interface Props {
     task: ITask,
-
     completeTask(id: string, isCompletes: CheckedState): void,
-
     deleteTask(id: string): void,
 }
 
