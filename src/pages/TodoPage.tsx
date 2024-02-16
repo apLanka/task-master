@@ -18,7 +18,6 @@ const TodoPage = () => {
     const [taskDescription, setTaskDescription] = useState<string>('')
     const [todoList, setTodoList] = useState<ITodoTask[]>([])
     const [appData, setAppData] = useState<AppData>()
-    const [user, setUser] = useState<IUser>()
     const [userId, setUserId] = useState('')
     const navigate = useNavigate()
 
@@ -126,7 +125,6 @@ const TodoPage = () => {
     const getUserDataFromUseId = (newAppData: AppData) => {
         const userData = newAppData?.taskMaster.users.find(user => user.id === userId)
         if (!userData) return
-        setUser(userData)
         const todoList = userData.todoList
         setTodoList(todoList)
         console.log(todoList)
