@@ -1,6 +1,8 @@
 # Todo App
 
 A modern Todo application built using Vite, React, TypeScript, Supabase, and Shadcn UI components.
+![Screenshot 2024-03-13 at 10 26 03](https://github.com/apLanka/task-master/assets/106298729/d8d10dfd-0f34-47ca-9959-6c047cc04a4c)
+![Screenshot 2024-03-13 at 10 26 19](https://github.com/apLanka/task-master/assets/106298729/8ac968a9-1c15-464d-b504-9f845adfe83d)
 
 ## Features
 
