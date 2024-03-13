@@ -1,30 +1,55 @@
-# React + TypeScript + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Todo application built using Vite, React, TypeScript, Supabase, and Shadcn UI components.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Fast Development:** Utilizes Vite for lightning-fast development experience with hot module replacement and optimized builds.
+- **Dynamic UI:** Built with React, enabling the creation of interactive and responsive user interfaces.
+- **Type Safety:** Leveraging TypeScript to catch errors during development and enhance code maintainability.
+- **Secure Data Storage:** Utilizes Supabase for secure and scalable backend data storage, ensuring data integrity and accessibility.
+- **Sleek Design:** Incorporates Shadcn UI components for a modern and visually appealing user interface, with customizable themes and styles.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Vite:** A next-generation frontend tooling with blazing fast cold server start.
+- **React:** A popular JavaScript library for building user interfaces.
+- **TypeScript:** A statically typed superset of JavaScript that enhances code quality and developer productivity.
+- **Supabase:** An open-source alternative to Firebase, providing a scalable and secure backend-as-a-service.
+- **Shadcn UI:** A set of sleek and customizable UI components for React applications, offering flexibility and style.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/apLanka/task-master.git
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. **Navigate to the project directory:**
+   ```bash
+   cd todo-app
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Set up Supabase:**
+   - Follow the instructions in the `README.md` file located in the `server` directory to set up your Supabase backend.
+
+5. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+6. **Open your browser:**
+   - Visit `http://localhost:3000` to view the application.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests, report issues, or suggest enhancements. 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
